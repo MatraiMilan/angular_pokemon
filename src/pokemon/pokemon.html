@@ -14,11 +14,15 @@
     </div>
 
 
-    <div id="content" class="mainDivs">
+    <div id="content" class="mainDivs" ng-controller="pokemonsController">
+
+        <div class="flex-container">
+            <div class="flex-item" ng-repeat="poke in pokemons | orderBy : 'url'">{{ poke.name }}</div>
+        </div>
 
     </div>
 
-    <script src="pokemon.js"></script>
     <script src="angular.js"></script>
+    <script src="pokemon.js"></script>
 </body>
 </html>
