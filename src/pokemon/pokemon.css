@@ -1,13 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+
 .mainDivs{
 
     /*-webkit-flex-flow: row wrap;*/
     justify-content: space-around;
     display: inline-block;
     min-height: 100%;
-
-
-
-
 
 }
 
@@ -25,16 +29,19 @@
 .flex-container {
     display: -webkit-flex;
     display: flex;
-    width: 400px;
-    height: 250px;
-    background-color: lightgrey;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 70%;
+    overflow: scroll;
+    margin: 0px 0px 0px 5px;
 }
 
 .flex-item {
     background-color: cornflowerblue;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     margin: 10px;
+    border: solid 1px black;
 }
 
 #menu{
@@ -57,4 +64,8 @@
     height: 200px;
     opacity: 0.9;
     border-bottom: ridge 2px black;
+}
+
+#search{
+    margin: 10px 20%;
 }
