@@ -66,6 +66,30 @@ html, body {
     border-bottom: ridge 2px black;
 }
 
+
+#filters{
+    text-align: center;
+}
+
+#filters > *{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: 18px;
+}
+#filters > p{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
 #search{
-    margin: 10px 20%;
+    width: 200px;
+    text-align: center;
+
+}
+
+.button{
+    width: 40%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background: transparent;
+    border: 1px solid black;
 }

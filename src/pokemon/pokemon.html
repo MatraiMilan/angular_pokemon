@@ -6,20 +6,29 @@
     <link type="text/css" rel="stylesheet" href="pokemon.css">
 </head>
 <body>
-    <div id="outerDiv">
-        <div id="menu" class="mainDivs">
-            <input type="text" id="search" ng-model="search">
-            <div id="pokemonProps">
+<div id="outerDiv">
+    <div id="menu" class="mainDivs">
+        <form id="filters">
+            <input type="text" placeholder="search" id="search" ng-model="search"><br/><br/><br/>
+            <p>Pokémons order by</p>
+            <input type="button" value="name" name="type" class="button" ng-click="orderByMe('name')">
+            <input type="button" value="id" name="id" class="button" ng-click="orderByMe('id')">
 
-            </div>
+
+        </form>
+
+        <div id="pokemonProps">
+
         </div>
+    </div>
 
 
     <div id="content" class="mainDivs" ng-controller="pokemonsController">
         <img src="http://i48.tinypic.com/20hva4o.jpg" id="headerPicture">
 
         <div class="flex-container">
-            <div class="flex-item" ng-repeat="poke in pokemons | orderBy : 'url' | filter : search">{{ poke.name }}</div>
+            <div class="flex-item" ng-repeat="poke in pokemons | orderBy : myOrderBy | filter : search">{{ poke.name }}
+            </div>
         </div>
 
     </div>
