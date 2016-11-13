@@ -8,7 +8,7 @@
 <body>
     <div id="outerDiv">
         <div id="menu" class="mainDivs">
-            <input type="text" id="search">
+            <input type="text" id="search" ng-model="search">
             <div id="pokemonProps">
 
             </div>
@@ -19,7 +19,7 @@
         <img src="http://i48.tinypic.com/20hva4o.jpg" id="headerPicture">
 
         <div class="flex-container">
-            <div class="flex-item" ng-repeat="poke in pokemons | orderBy : 'url'">{{ poke.name }}</div>
+            <div class="flex-item" ng-repeat="poke in pokemons | orderBy : 'url' | filter : search">{{ poke.name }}</div>
         </div>
 
     </div>
