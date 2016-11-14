@@ -10,9 +10,9 @@
     <div id="menu" class="mainDivs">
         <form id="filters">
             <input type="text" placeholder="search" id="search" ng-model="search"><br/><br/><br/>
-            <p>Pokémons order by</p>
+            <p>Order by</p>
             <input type="button" value="name" name="type" class="button" ng-click="orderByMe('name')">
-            <input type="button" value="type" name="id" class="button" ng-click="orderByMe('id')">
+            <input type="button" value="id" name="id" class="button" ng-click="orderByMe('id')">
 
 
         </form>
@@ -27,7 +27,14 @@
         <img src="http://i48.tinypic.com/20hva4o.jpg" id="headerPicture">
 
         <div class="flex-container">
-            <div class="flex-item" ng-repeat="poke in pokemons | orderBy : myOrderBy | filter : search">{{ poke.name }}
+            <div class="flex-item" ng-repeat="poke in pokemons | orderBy : myOrderBy | filter : search"
+                 style="background-image: url({{getPokeImgUrl(poke.url)}});
+                 background-repeat: no-repeat;
+                 text-transform: capitalize;
+                 background-position: center; ">
+
+                {{ poke.name  }}
+
             </div>
         </div>
 
